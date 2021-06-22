@@ -36,6 +36,9 @@ jobs:
         snyk monitor server/
 
     # Snyk Code Scan 
+    - name: Snyk Code Test 
+      run: |
+        snyk code test server/
     
     # Build Docker Container
     - name: Build Container
