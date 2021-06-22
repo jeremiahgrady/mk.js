@@ -27,4 +27,4 @@ jobs:
     # Run Snyk Test 
     - name: Snyk Test
       run: |
-         snyk test
+         snyk test server/
