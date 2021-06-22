@@ -39,6 +39,7 @@ jobs:
     - name: Snyk Code Test 
       run: |
         snyk code test server/
+      continue-on-error: true 
     
     # Build Docker Container
     - name: Build Container
