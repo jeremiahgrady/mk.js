@@ -25,6 +25,19 @@ jobs:
          snyk auth ${SNYK_TOKEN}
 
     # Run Snyk Test 
-    - name: Snyk Test
+    - name: Snyk SCM Test
       run: |
          snyk test server/
+      continue-on-error: true 
+    
+    # Snyk Monitor
+    - name: Snyk Monitor
+      run: |
+        snyk monitor server/
+
+    # Snyk Code Scan 
+    
+    # Build Docker Container
+    - name: Build Container
+      run: |
+        docker build . -t mooglepom/mk:v1
