@@ -45,3 +45,10 @@ jobs:
     - name: Build Container
       run: |
         docker build . -t mooglepom/mk:v1
+
+    # Run Docker Container and Smoke Test
+    -name: Run and Test Docker Container
+      run: |
+        docker run -d -t mk-container && docker exec commowand curl --retry 10 --retry-connrefused http://localhost:5555
+
+  
