@@ -49,5 +49,5 @@ jobs:
     # Run Docker Container
     -name: Run and Test Docker Container
       run: |
-        docker run -d -t mk-container 
+        docker run -d -t 
   
