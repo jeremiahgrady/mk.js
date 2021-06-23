@@ -45,3 +45,8 @@ jobs:
     - name: Build Container
       run: |
         docker build . -t mooglepom/mk:v1
+
+    #Run Docker Container
+    - name: Run Container
+      run: |
+        docker run -d -t 
