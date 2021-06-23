@@ -49,4 +49,4 @@ jobs:
     #Run Docker Container
     - name: Run Container
       run: |
-        docker run -d mk
+        docker run -d mooglepom/mk:v1
