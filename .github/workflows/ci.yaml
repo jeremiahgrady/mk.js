@@ -50,5 +50,6 @@ jobs:
     - name: Test Docker Container
       run: |
         docker run -d mooglepom/mk:v1
-        curl http://127.0.0.1:5555
-#no
+        curl localhost:5555
+        
+#please no breaky
