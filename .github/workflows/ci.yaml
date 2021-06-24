@@ -46,7 +46,8 @@ jobs:
       run: |
         docker build . -t mooglepom/mk:v1
 
-    #Run Docker Container
-    - name: Run Container
+    #Run Smoke Test
+    - name: Test Docker Container
       run: |
         docker run -d mooglepom/mk:v1
+        curl http://127.0.0.1:5555
