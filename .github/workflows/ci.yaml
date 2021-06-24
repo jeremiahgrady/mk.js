@@ -46,10 +46,15 @@ jobs:
       run: |
         docker build . -t mooglepom/mk:v1
 
-    #Run Smoke Test
-    - name: Test Docker Container
-      run: |
-        docker run -d mooglepom/mk:v1 
-        curl localhost:5555 sleep 2
+    #Run Smoke Test (Optional- Needs Attention)
+    #- name: Test Docker Container
+      #run: |
+        #docker run -d mooglepom/mk:v1 
+        #curl localhost:5555 sleep 1
 
-#please no breaky plz
+#please no breaky
+
+    #Run Container Scan
+    - name: Snyk Container Scan
+      run: |
+        snyk container test --file=Dockerfile mk.js
