@@ -50,6 +50,7 @@ jobs:
     - name: Test Docker Container
       run: |
         docker run -d mooglepom/mk:v1
+        sleep 2
         curl localhost:5555
-        
+
 #please no breaky
